@@ -11,7 +11,7 @@ from .oxford_pets import OxfordPets
 @DATASET_REGISTRY.register()
 class ImageNet(DatasetBase):
 
-    dataset_dir = "imagenet"
+    dataset_dir = "imagenet-mini"
 
     def __init__(self, cfg):
         root = os.path.abspath(os.path.expanduser(cfg.DATASET.ROOT))

@@ -3,7 +3,7 @@
 cd ..
 
 # custom config
-DATA=/kaggle/input/
+DATA=/kaggle/input/imagenetmini-1000/
 TRAINER=PLOT 
 
 DATASET=$1
@@ -18,7 +18,8 @@ for SHOTS in 1 2 4 8 16
 do
 for SEED in 1 2 3
 do
-DIR=your_work_path/plot-coop/output/OP_N${N}/${DATASET}/${TRAINER}/${CFG}_${SHOTS}shots/nctx${NCTX}_csc${CSC}_ctp${CTP}/seed${SEED}
+
+DIR=/kaggle/working/plot-coop/output/OP_N${N}/${DATASET}/${TRAINER}/${CFG}_${SHOTS}shots/nctx${NCTX}_csc${CSC}_ctp${CTP}/seed${SEED}
 if [ -d "$DIR" ]; then
     echo "Results are available in ${DIR}. Skip this job"
 else
