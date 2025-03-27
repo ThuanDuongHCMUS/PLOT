@@ -3,7 +3,7 @@
 cd ..
 
 # custom config
-DATA=your_data_path
+DATA=/kaggle/input/
 TRAINER=PLOT 
 
 DATASET=$1
